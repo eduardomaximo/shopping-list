@@ -6,12 +6,16 @@ const ProductList = (props) => {
     <div>
       <ul>
         {props.products.map((product) => {
-          <Product
-            name={product.name}
-            price={product.price}
-            fabricationDate={product.fabricationDate}
-            expirationDate={product.expirationDate}
-          />;
+          return (
+            <div key={product.id}>
+              <Product
+                name={product.name}
+                price={product.price}
+                fabricationDate={product.fabricationDate}
+                expirationDate={product.expirationDate}
+              />
+            </div>
+          );
         })}
       </ul>
     </div>
