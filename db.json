@@ -7,6 +7,14 @@
       "fabricationDate": "20-02-2000",
       "expirationDate": "",
       "perishable": "false"
+    },
+    {
+      "id": 2,
+      "name": "Product 2",
+      "price": "20",
+      "fabricationDate": "20-02-2000",
+      "expirationDate": "",
+      "perishable": "false"
     }
   ]
 }
