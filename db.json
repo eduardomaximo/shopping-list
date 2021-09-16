@@ -1,0 +1,12 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Product 1",
+      "price": "20",
+      "fabricationDate": "20-02-2000",
+      "expirationDate": "",
+      "perishable": "false"
+    }
+  ]
+}
