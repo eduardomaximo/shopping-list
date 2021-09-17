@@ -1,21 +1,17 @@
 import ProductList from "./components/ProductList";
-import { useState, useEffect } from "react";
-import { getProducts } from "./helpers/fetchAPI";
+import { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { getProducts } from "./store/ducks/products";
 
 function App() {
-  const [products, setProducts] = useState(null);
-
-  const fetchProducts = async () => {
-    const response = await getProducts();
-    setProducts([...response]);
-  };
+  const dispatch = useDispatch();
+  const products = useSelector((state) => state.products.products);
 
   useEffect(() => {
-    fetchProducts();
+    dispatch(getProducts());
   }, []);
 
-  console.log(products);
-  return <div>{products && <ProductList products={products} />}</div>;
+  return <div> {products && <ProductList products={products} />} </div>;
 }
 
 export default App;
